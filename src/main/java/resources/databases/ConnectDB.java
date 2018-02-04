@@ -8,7 +8,7 @@ import javax.net.ssl.X509TrustManager;
 import java.security.GeneralSecurityException;
 import java.security.cert.X509Certificate;
 
-public class ConnectDB {
+public class    ConnectDB {
     private static SocketFactory _sf = null;
     public MongoClient connectToRecommendedSSLAtlasMongoClient() {
         try {
@@ -19,7 +19,7 @@ public class ConnectDB {
             System.out.println(e.getStackTrace());
         }
         MongoClientURI uri = new MongoClientURI(
-                "mongodb://testAdmin:abc123!@cluster0-shard-00-00-esgno.mongodb.net:27017,cluster0-shard-00-01-esgno.mongodb.net:27017,cluster0-shard-00-02-esgno.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin");
+                "mongodb://TestAdmin:admin@cluster0-shard-00-00-t9a3y.mongodb.net:27017,cluster0-shard-00-01-t9a3y.mongodb.net:27017,cluster0-shard-00-02-t9a3y.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin");
 
         MongoClient mongoClient = new MongoClient(uri);
         return mongoClient;
